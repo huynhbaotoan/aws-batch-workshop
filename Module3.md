@@ -73,10 +73,6 @@ As an optional step, you can test out Cloud9's debugging features
 
 	<img src="images/s3-output-file.png" width="80%">
 	
-## Module 3+ (Optional): Using the debugger 
-
-Just like any other IDE, you can use cloud9 with a debugger. If you are interested in trying out the debugger, expand below for instructions. 
-
 ## Next step
 
 Move on to [**Module 4: Build a docker container**](./Module4.md)
