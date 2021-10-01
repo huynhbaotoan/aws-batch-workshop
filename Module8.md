@@ -5,27 +5,18 @@ As you may have noticed in the last module, occasionally, your batch job might f
 
 ## Instructions
 
-1. Create a new job by clicking on **Submit job** in the [AWS Batch console](https://us-east-2.console.aws.amazon.com/batch/home?region=us-east-2#/jobs) under the Jobs tab  
+1. Create a new job by clicking on **Submit job** in AWS Batch console under the Jobs tab  
 
 1. For Job run-time:
 	* **Job name**: use `job-with-retry` 
-	* **Job definition**: pick the definition you created in last module (e.g. "<your-user-name>-monte-carlo-job")
-	* **Job queue**: the job queue you created in last module (e.g. "<your-user-name>-queue")
- 
-1. For environment
-
-	* Pick `Array` **job type** again
-	* For Array size, use `4` this time to add more load
-	
-	<img src="images/submit-job-with-retry-top.png" width="90%"/>
+	* **Job definition**: pick the definition you created in last module (e.g. "<your-username>-aws-batch-workshop-job")
+	* **Job queue**: the job queue you created in last module (e.g. "<your-username>-queue")
 
 1. To use automated retries, all you need to do is specify number of retres in the **Job attempts** field. 
 
 	* Use `3` for **Job attempts**
-	* To change things up a bit, use a different stock ticker, e.g. `AAPL` for this simulation run
-	* Up the number of iterations per run to `4000`
 	
-	<img src="images/submit-job-with-retry-bottom.png" width="100%"/>
+	<img src="images/submit-job-with-retry.png" width="100%"/>
 
 1. Click **Submit job** 
 
