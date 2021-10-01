@@ -12,13 +12,14 @@ To create this IAM role:
 1. Go to **Roles**, then **Create role**
 1. In the **Select type of trusted entity** screen, select **Elastic Container Service** under list of services, then select **Elastic Container Service Task**
 
+	<img src="images/iam-role-select-service_header.png" width="70%"/>
 	<img src="images/iam-role-select-service.png" width="70%"/>
 
 1. In the **Attach permissions** policies screen, look for S3 in the search bar and pick **AmazonS3FullAccess**
 
 	<img src="images/iam-select-policy.png" width="70%" />
 
-1. For Role name, pick a unique name e.g. `<your-user-name>-monte-carlo`, and click **Create role**
+1. For Role name, pick a unique name e.g. `<your-username>-aws-batch-workshop`, and click **Create role**
 
 ## Next step
 
