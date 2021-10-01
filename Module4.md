@@ -40,7 +40,7 @@ To build a docker container, we need to create a **Dockerfile**, a text document
 	Ensure you are in the `src/` directory:
 
 	```
-	cd ~/environment/aws-batch-monte-carlo-workshop/src
+	cd ~/environment/aws-batch-workshop/src
 	```
 
 	Build the docker image with tag `monte-carlo-simulator`

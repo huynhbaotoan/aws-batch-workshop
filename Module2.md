@@ -6,16 +6,16 @@ AWS Cloud9 is a cloud IDE accessed from your web browser. It comes prepackaged w
 ## Instructions
 
 
-1. Go to the Cloud9 management console [link](https://us-east-2.console.aws.amazon.com/cloud9/home?region=us-east-2)  
+1. Go to the Cloud9 management console [link](https://ap-southeast-1.console.aws.amazon.com/cloud9/home?region=ap-southeast-1)  
 
 
-1. Make sure you are in the **US East (Ohio)** region
+1. Make sure you are in the the same region with s3 bucket in step 1.
 
 	<img src="images/region-selection-with-highlight.png" width="40%"/>
 
 1. Click **Create environment** 
 
-1. For **Name**, use `<your-username>-workspace`. For example, `princess-carolyn-workspace`, click **Next step** 
+1. For **Name**, use `<your-username>-workspace`. For example, `aws-batch-cloud9-workspace`, click **Next step** 
 
 	<img src="images/create-cloud9.png" width="70%"/>
 
@@ -24,6 +24,18 @@ AWS Cloud9 is a cloud IDE accessed from your web browser. It comes prepackaged w
 	<img src="images/cloud9-env-settings.png" width="70%"/>
 
 1. Review the settings and click **Create environment**
+
+1. Increase volume size of Cloud9, go to EC2 management console, then select Volumes of Elastic Block Store
+
+	<img src="images/cloud9-ebs-volumes.png" width="70%"/>
+
+	Select appropriate volume, and select Modify Volume from **Actions** menu as below
+
+	<img src="images/cloud9-volumes-modify.png" width="70%"/>
+
+	Increase the volume size, and click **Modify**
+
+	<img src="images/modify-ebs-volume.png" width="70%"/>
 
 1. You should now be redirected to the new IDE environment!  
 

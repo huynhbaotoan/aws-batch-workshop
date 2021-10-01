@@ -9,33 +9,33 @@ As an optional step, you can test out Cloud9's debugging features
 1. In the terminal window of the cloud9 environment, run the below to clone the github repo:
 
 	```bash
-	 git clone https://github.com/angelarw/aws-batch-monte-carlo-workshop
+	 git clone https://github.com/huynhbaotoan/aws-batch-workshop
 	```
 	
 1. Enter the downloaded directory with 
 
 	```bash
-	cd aws-batch-monte-carlo-workshop
+	cd aws-batch-workshop
 	```
 	
-1. By default, Cloud9 uses python 2.7. Run the following the terminal to create a virtual environment for python 3.6. (There are also many other benefits of using [virtualenv](https://virtualenv.pypa.io/en/stable/) in managing python dependencies. )
+1. By default, Cloud9 uses python 2.7. Run the following the terminal to create a virtual environment for python 3.7. (There are also many other benefits of using [virtualenv](https://virtualenv.pypa.io/en/stable/) in managing python dependencies. )
 
 	```bash
 	unalias python
-	virtualenv -p /usr/bin/python36 .venv
+	virtualenv -p /usr/bin/python3.7 .venv
 	source .venv/bin/activate
 	```
 	
 1. Now if you check the python version by typing `python --version`, you should see something like this in the result:
 	
 	```
-	(.venv) admin:~/environment/aws-batch-monte-carlo-workshop (master) $ python --version                          
-	Python 3.6.5
+	(.venv) admin:~/environment/aws-batch-workshop (master) $ python --version                          
+	Python 3.7.10
 	```
 	
-1. Now take a look at the main source code file, `simulator.py` in the `src/` folder. 
+1. Now take a look at the main source code file, `job.py` in the `src/` folder. 
 
-	To do this, you can use the code editor of the Cloud9 IDE. Go to the left hand **Environment** tool bar, click into the `aws-batch-monte-carlo-workshop` folder, and then into `src`
+	To do this, you can use the code editor of the Cloud9 IDE. Go to the left hand **Environment** tool bar, click into the `aws-batch-workshop` folder, and then into `src`
 	
 	<img src="images/open-simulator-file.png" />
 	
@@ -129,7 +129,7 @@ You are also welcome to skip ahead if the other modules are more of your interes
 
 	```
     "echo using virtual env",
-    "source /home/ec2-user/environment/aws-batch-monte-carlo-workshop/.venv/bin/activate",
+    "source /home/ec2-user/environment/aws-batch-workshop/.venv/bin/activate",
     "echo `python --version`",
 
 	```

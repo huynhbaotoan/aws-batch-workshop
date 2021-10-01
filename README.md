@@ -1,5 +1,7 @@
-# Monte Carlo Simulation using AWS Batch
+# Jobs using AWS Batch
 A forked version of [ec2-spot-montecarlo-workshop](https://github.com/aws-samples/ec2-spot-montecarlo-workshop) that focuses on Cloud9 and AWS Batch
+
+A sample of [aws-batch-sample](https://github.com/adelagon/aws-batch-sample) that has a sample to convert from CSV to parquet on Cloud9 and AWS Batch
 
 <img src="images/architecture.png" width="70%" />
 
