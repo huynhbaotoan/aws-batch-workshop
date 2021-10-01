@@ -9,59 +9,43 @@ In this section, we will use the AWS batch first run wizard to walk through:
 
 ## Instructions
 
-1. Click [here](https://us-east-2.console.aws.amazon.com/batch/home?region=us-east-2#/wizard) to go to the AWS Batch wizard 
+1. Click [here](https://ap-southeast-1.console.aws.amazon.com/batch/home?region=ap-southeast-1#/wizard) to go to the AWS Batch wizard 
 
-1. Make sure **Using Amazon EC2** radio button is selected
+1. Make sure **On-demand** radio button is selected, and input the compute environment name, click **Next**
 
-1. Under **Job run-time**, create a new job definition:
+	<img src="images/batch-wizard-env-screen.png" width="70%"/>
 
-	* **Job definition name**: `<your-user-name>-monte-carlo-job`
-	* **Job role**: Pick the role you just created in module 6
+1. In the page **Create a job queue**, create a new job queue:
+
+	* **Job queue name**: `<your-username>-aws-batch-workshop-job-queue`
  
- 	<img src="images/create-job-definition.png" width="70%"/>
+ 	<img src="images/batch-wizard-job-queue.png" width="70%"/>
 
-1. Under **Container properties** 
+1. In the page **Create a job definition**, create a new job definition as below
 
-	* For **Job type**, select **Array** 
+	* **Job definition name**: `<your-username>-aws-batch-workshop-job-definition`
+	* Under **Container properties**, for **container image** field, fill in the URI of container repo you have created in Module 5:
+	
+		It should be in the format of `<account-id>.dkr.ecr.<region>.amazonaws.com/<your-username>-aws-batch-workshop`
 
-		> Array jobs let you run a collection of related, yet separate batch jobs that may be distributed across multiple hosts and may run concurrently. This is a perfect use case for our monte carlo simulation that can easily be parallelized to be run simultaneously across multiple containers
-	
-	* For **Array size**, select 2 as the value for an initial test 
+	<img src="images/batch-wizard-job-definition-1.png" width="70%"/>
 
-	* For **container image** field, fill in the URI of container repo you have created in Module 5:
-	
-		It should be in the format of `<account-id>.dkr.ecr.us-east-2.amazonaws.com/<your-username>-monte-carlo-simulator`
-	
-		You can also look it up from the [ECR Console](https://us-east-2.console.aws.amazon.com/ecs/home?region=us-east-2#/repositories)
-	
-	* For the **Command** to run, put in the following: note that we are use the **Parameters** feature such as `Ref::s3bucket` so we can easily update it when submitting future jobs: 	
+	Under **Container properties**, expand **Additional configuration**
+	- **Job role**: Pick the role you just created in module 6
+ 
+ 	<img src="images/batch-wizard-job-definition-container.png" width="70%"/>
+
+	Click **Next**
+
+1. In the page **Create a job**, create a new job as below and go **Next** 
+
+	* **Job run-time name**: `<your-username>-aws-batch-workshop-job`
+	* For the **Command** to run, put in the following: 	
 	```
-	python simulator.py --s3_bucket Ref::s3bucket --iterations Ref::iterations --stock Ref::stock
+	python job.py
 	```
 	
-	<img src="images/batch-container-properties.png" width="90%"/>
-
-1. In the **Parameters** section, put in the default parameters for the job definition (you can override them when submitting future jobs)
-
-	* **Key**: `s3bucket`   **Value**: `<your-name>-monte-carlo` (the name of bucket you created in module 1)
-	* **Key**: `iterations`   **Value**: `1000` 
-	* **Key**: `stock`   **Value**: `AMZN`   
-
-	<img src="images/batch-parameters.png" width="90%"/>
-
-1. Click **Next** 
-1. In the **Set your compute environment type** section, use `<your-username>-compute-environment` and leave the rest as default
-
-	<img src="images/batch-compute-environment.png" width="100%"/>
-	
-1. In **Configure your compute resources**, keep the defaults
-
-	<img src="images/batch-compute-resources.png" width="100%"/>
-
-
-1. in **Set up your job queue**, use `<your-username>-compute-environment` as the queue name:
-
-	<img src="images/batch-queue-name.png " width="90%"/>
+	<img src="images/batch-wizard-job.png" width="90%"/>
 
 1. Finally, click **Create**
  
