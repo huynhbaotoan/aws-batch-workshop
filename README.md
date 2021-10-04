@@ -16,5 +16,4 @@ A sample of [aws-batch-sample](https://github.com/adelagon/aws-batch-sample) tha
 * [Module 6: Create an IAM role for the container](./Module6.md)
 * [Module 7: Create AWS Batch job](./Module7.md)
 * [Module 8: Submit Batch job with retries](./Module8.md)
-* [Extra Credit](ExtraCredit.md) 
 * [Cleanup](./cleanup.md)

@@ -29,6 +29,8 @@ As you may have noticed in the last module, occasionally, your batch job might f
 
 # Next step 
 
-You have successfully built an batch job in a Docker container that can elastically scale to your needs and automatically retries upon failures! 
+You have successfully built an batch job in a Docker container that can elastically scale to your needs and automatically retries upon failures! You can explore job.py, and discover how to run it with parameters. 
+
+You can try to run the job with other deployments - Fargate...
 
 Or if you are done, go to [clean up](cleanup.md) section to clean up the environment. 
