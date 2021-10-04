@@ -19,6 +19,9 @@ To create this IAM role:
 
 	<img src="images/iam-select-policy.png" width="70%" />
 
+	Continue to pick `CloudWatchLogsFullAccess` and `AWSAppRunnerServicePolicyForECRAccess`. Finally, it looks like below
+
+	<img src="images/create-role-policies-attachment.png" width="100%"/>
 1. For Role name, pick a unique name e.g. `<your-username>-aws-batch-workshop`, and click **Create role**
 
 ## Next step
